@@ -1,17 +1,31 @@
-import stlyle from "./Join.module.css"
+import { useRef } from "react";
+import stlyle from "./Join.module.css";
 
-import {Input, Button} from "@mui/material"
+import { Input, Button } from "@mui/material";
+import io from "socket.io-client";
 
 const Join = () => {
-    return (
-        <div>
-            <h2>Bem-vindo ao devChat</h2>
-            <Input inputRef={usernameRef} placeholder="Nome de usuário" />
-            <Button sx={{mt:2, mb:2}} variant="contained" onClick={() => handleSubmit()}> Entrar
+  const usernameRef = useRef();
+  const handleSubmit = async () => {
+    const username = usernameRef.current.value;
+    if (!username.trim()) return;
+    const socket = io.connect("http://localhos:3001");
+    socket.emit("set_username", username);
+  };
+  return (
+    <div>
+      <h2>Bem-vindo ao devChat</h2>
+      <Input inputRef={usernameRef} placeholder="Nome de usuário" />
+      <Button
+        sx={{ mt: 2, mb: 2 }}
+        variant="contained"
+        onClick={() => handleSubmit()}
+      >
+        {" "}
+        Entrar
+      </Button>
+    </div>
+  );
+};
 
-            </Button>
-        </div>
-    )
-}
-
-export default Join
+export default Join;
