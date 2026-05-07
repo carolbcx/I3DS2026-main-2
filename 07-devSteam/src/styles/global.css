@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #10253d;
+  color: white;
+}
+
+/* HEADER PRETO */
+
+.header-bg {
+  width: 100%;
+  height: 65px;
+
+  background: #0d111d;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 999;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 1200px;
+  margin: 10px auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  position: fixed;
+
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 9999;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 38px;
+  height: 38px;
+
+  object-fit: contain;
+}
+
+.logo h2 {
+  font-size: 28px;
+}
+
+/* BUSCAR */
+
+.navbar input {
+  width: 380px;
+  padding: 10px;
+
+  background: #3f7fb1;
+
+  border: none;
+  outline: none;
+
+  color: white;
+
+  border-radius: 4px;
+
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.navbar input::placeholder {
+  color: #d6d6d6;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 1200px;
+  margin: auto;
+
+  padding-top: 90px;
+}
+
+/* TITULOS */
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* PROMOÇÕES */
+
+.promo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.promo-card {
+  width: 220px;
+  background: #2f89c5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.promo-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.promo-info {
+  padding: 12px;
+}
+
+.promo-info p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.price-row span {
+  background: #8cc500;
+  padding: 6px 10px;
+  font-weight: bold;
+}
+
+.price-row h3 {
+  color: #c8ff00;
+}
+
+/* BOTÃO */
+
+button {
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  background: #7fb000;
+  color: white;
+
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #96cf00;
+}
+
+/* OUTROS JOGOS */
+
+
+.games-section {
+  margin: 40px auto 0 auto;
+  width: 900px;
+}
+
+.game-row {
+  display: flex;
+  margin-bottom: 20px;
+
+  background: #2f89c5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.game-row img {
+  width: 240px;
+  object-fit: cover;
+}
+
+.game-content {
+  width: 100%;
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-content h3 {
+  margin-bottom: 8px;
+}
+
+.game-content p {
+  color: #d4d4d4;
+  font-size: 14px;
+}
+
+.game-buy h2 {
+  margin-bottom: 10px;
+  color: #c8ff00;
+}
+
+/* CARRINHO */
+
+.preco{
+  display: felx;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #344654;
+  margin: 0 15px;
+}
+
+.cart-box {
+  width: 220px;
+
+  background: #2f89c5;
+
+  border-radius: 4px;
+
+  padding: 15px;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 15px;
+}
+
+.cart-icon {
+  font-size: 28px;
+}
+
+.cart-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart-count {
+  font-size: 13px;
+  color: #d8d8d8;
+}
+
+.cart-game {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  padding: 8px;
+  border-radius: 4px;
+
+  margin-bottom: 10px;
+}
+
+.cart-game img {
+  width: 50px;
+  height: 60px;
+
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cart-game p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.cart-game span {
+  color: #c8ff00;
+  font-size: 12px;
+}
+
+.empty-cart {
+  font-size: 13px;
+  color: #d8d8d8;
+}
+
+/* TOTAL */
+
+.cart-total {
+  margin-top: 15px;
+  padding-top: 10px;
+
+  border-top: 1px solid rgba(255,255,255,0.2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-total h3 {
+  color: #c8ff00;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1250px) {
+
+  .navbar,
+  .container {
+    width: 95%;
+  }
+
+  .promo-grid {
+    flex-wrap: wrap;
+  }
+
+  .games-section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header-bg {
+    height: auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+
+    position: static;
+    transform: none;
+
+    width: 95%;
+  }
+
+  .navbar input {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .promo-grid {
+    justify-content: center;
+  }
+
+  .game-row {
+    flex-direction: column;
+  }
+
+  .game-row img {
+    width: 100%;
+  }
+
+  .game-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .cart-box {
+    width: 100%;
+  }
+
+  .container {
+    padding-top: 40px;
+  }
+}
