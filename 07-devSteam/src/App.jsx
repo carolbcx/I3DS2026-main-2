@@ -99,13 +99,20 @@ function App() {
       />
 
       {showPaymentsPanel && (
-        <div className="payments-overlay" onClick={() => setShowPaymentsPanel(false)}>
-          <div className="payments-modal" onClick={(event) => event.stopPropagation()}>
+        <div
+          className="payments-overlay"
+          onClick={() => setShowPaymentsPanel(false)}
+        >
+          <div
+            className="payments-modal"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="d-flex justify-content-between align-items-start gap-3 mb-3">
               <div>
                 <h2 className="mb-1">Formas de pagamento</h2>
                 <p className="mb-0 text-white-50">
-                  Cadastre cartão ou boleto e acesse a tela completa de pagamentos.
+                  Cadastre cartão ou boleto e acesse a tela completa de
+                  pagamentos.
                 </p>
               </div>
 
